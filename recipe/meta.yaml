@@ -1,5 +1,5 @@
 {% set name = "net-ssh" %}
-{% set version = "6.1.0" %}
+{% set version = "7.0.1" %}
 
 package:
   name: rb-{{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://rubygems.org/downloads/{{ name }}-{{ version }}.gem
-  sha256: 8905c1f9209fb216c59cc631c2e4085b1a9660598da6de0f20323264d993e34a
+  sha256: 59a7607d93b7c97979df51afbaa97ac6e6fcd315778151c0b521ca13178ae3e2
 
 build:
   noarch: generic
-  number: 1
+  number: 0
   script:
     - gem install -N -l -V --norc --ignore-dependencies {{ name }}-{{ version }}.gem
     - gem unpack {{ name }}-{{ version }}.gem
